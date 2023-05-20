@@ -1,0 +1,146 @@
+/* css resets*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 5fr;
+    grid-template-areas: "logo logo logo nav"
+                        "main main main main"
+                        "type item1 item2 item3";
+}
+
+.nav ul{
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.nav li{
+    margin-left: 20px;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: #9a1d1d;
+}
+.nav{
+    grid-area: nav;
+    background-color: #df26a2;
+}
+.main{
+    grid-area: main;
+    background-color: #d5e830;
+}
+.product-type{
+    grid-area: type;
+    background-color: blue;
+}
+
+.item1{
+    grid-area: item1;
+    background-color: #eaeaea;
+}
+.item2{
+    grid-area: item2;
+    background-color: #eaeaea;
+}
+.item3{
+    grid-area: item3;
+    background-color: #eaeaea;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.item{
+    margin-left: 20px;
+    height: 340px;
+}
+.item img{
+    width: 100%;
+    padding: 20%;
+}
+
+.main h1{
+    font-size: 50px;
+    color: rgb(69, 69, 69);
+}
+.main #green-h1{
+    color: #007423;
+}
+.product-type{
+    padding: 10px;
+}
+.product-type span{
+    margin-left: 10px;
+}
+
+.header{
+    position: fixed;
+}
+
+@media (min-width:767px) and (max-width: 1023px) {
+    .container{
+    margin: 10px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 50px 230px 4fr;
+    grid-template-areas: "logo logo nav"
+                        "main main main"
+                        "type item1 item2";
+                    }
+    /* .product-type{
+        display: none;
+    
+    } */
+    .item3{
+        display: none;
+    }
+    .main h1{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 766px) {
+    .container{
+    margin: 10px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 50px 150px 4fr;
+    grid-template-areas: "logo nav"
+                        "main main"
+                        "item1 item2";
+                    }
+    /* .product-type{
+        display: none;
+    
+    } */
+    .item3{
+        display: none;
+    }
+    .product-type{
+        display: none;
+    }
+
+    .main h1{
+        font-size: 30px;
+    }
+}
