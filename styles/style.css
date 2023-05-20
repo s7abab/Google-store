@@ -36,19 +36,19 @@ ul{
 
 .logo{
     grid-area: logo;
-    background-color: #9a1d1d;
+    background-color: #ffff;
 }
 .nav{
     grid-area: nav;
-    background-color: #df26a2;
+    background-color: #ffff;
 }
 .main{
     grid-area: main;
-    background-color: #d5e830;
+    background-color: #ffff;
 }
 .product-type{
     grid-area: type;
-    background-color: blue;
+    background-color: #ffff;
 }
 
 .item1{
@@ -84,7 +84,7 @@ ul{
     color: rgb(69, 69, 69);
 }
 .main #green-h1{
-    color: #007423;
+    color: #00ad1a;
 }
 .product-type{
     padding: 10px;
